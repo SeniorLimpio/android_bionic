@@ -625,6 +625,7 @@ END(memcpy)
 #include "memcpy_base.S"
 
 ENTRY_PRIVATE(__memcpy_chk_fail)
+	.cfi_startproc
         // Preserve lr for backtrace.
         push    {lr}
         .save   {lr}
